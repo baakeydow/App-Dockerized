@@ -28,7 +28,7 @@
 .frame {
 	-moz-animation-duration: 2s;
 	-webkit-animation-duration: 2s;
-	margin:				0 auto;
+	/*margin:				0 auto;*/
 	background-color:	#000000;
 }
 

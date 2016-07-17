@@ -11,6 +11,8 @@ var updateColl = function() {
   });
 };
 
+$scope.selected = "Get a Collection then Fire and Edit the Data !!!";
+
 updateColl();
 
 $scope.addColl = function() {
@@ -24,7 +26,8 @@ $scope.addColl = function() {
 $scope.selectColl = function(id) {
   console.log(id);
   $http.get('/dbColl/' + id).success(function(response) {
-    $scope.coll = response;
+    $scope.coll = "";
+	$scope.selected = response.collection;
   });
 };
 
