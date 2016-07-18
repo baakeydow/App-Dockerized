@@ -9,6 +9,10 @@
 			</tr>
 		</thead>
  		<tbody>
+			<button g-click="displayColl()">Update List</button>
+			<tr ng-repeat="db in CollList">
+			<td style="text-align: center">{{db}}</td>
+			</tr>
 			<h1 id="Header" style="font-size: 20px; text-align: center; margin-top:30px;">{{selected}}<h1>
 			<td>
 				&nbsp;&nbsp;

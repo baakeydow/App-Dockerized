@@ -3,15 +3,24 @@ angular.module('myColl', ['ngRoute', 'myLinks', 'ngAnimate'])
 .controller('CollCtrl', ['$scope', '$http',
 			function($scope, $http) {
 
+$scope.selected = "Get a Collection then Fire and Edit the Data !!!";
+
+var listColl = function() {
+	$http.get('/CollList').success(function(response) {
+      $scope.CollList = response;
+    });
+};
+
+$scope.displayColl = listColl();
+
 var updateColl = function() {
   $http.get('/dbColl').success(function(response) {
     console.log(response);
     $scope.dbColl = response;
 	$scope.coll = "";
+	listColl();
   });
 };
-
-$scope.selected = "Get a Collection then Fire and Edit the Data !!!";
 
 updateColl();
 

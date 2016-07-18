@@ -24,6 +24,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.disable('x-powered-by');
 
+var list = mongojs('linkslist', []);
+
+var ListAllColl = function() {
+	app.get('/CollList', function(req, res){
+		list.getCollectionNames(function (err, doc) {
+			console.log(JSON.stringify(doc));
+			res.json(doc);
+		});
+	});
+}
+
+ListAllColl();
+
 var Coll = mongojs('linkslist', ['dbColl']);
 
 var getAllColl = function() {
