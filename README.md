@@ -8,4 +8,5 @@ Private Docker WebApp to manage/save links/youtube videos
 
 ### Dockerize it
 
-`sh launchContainer.sh`  
+`sh createContainer.sh`  
+`sh mountVol.sh`  
