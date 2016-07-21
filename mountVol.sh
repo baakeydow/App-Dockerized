@@ -1,1 +1,1 @@
-docker run -p 80:8000 -v $HOME/App-Dockerized-PROD/data/lib/:/var/lib/mongodb -v $HOME/App-Dockerized-PROD/data/log:/var/log/mongodb -it appdockerizedprod_nodejs:latest /bin/bash
+sudo docker run -p 80:8000 -v $HOME/App-Dockerized/data/lib/:/var/lib/mongodb -v $HOME/App-Dockerized/data/log:/var/log/mongodb -itd appdockerized_nodejs:latest /bin/bash -c "sh /home/devops/src/runApp.sh" 
