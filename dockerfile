@@ -8,4 +8,3 @@ RUN     cd /home/devops/src ; touch users.htpasswd ; htpasswd -db $PWD/users.htp
 
 # App binds to port 8000 so need to EXPOSE 8000 to have it mapped by the docker daemon
 EXPOSE  8000
-
