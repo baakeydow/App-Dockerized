@@ -3,3 +3,4 @@ src/npm-debug.log
 src/users.htpasswd
 src/public/sources/pdfs/
 data
+MONGODATABASEBACKUP/data
