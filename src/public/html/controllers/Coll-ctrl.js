@@ -36,7 +36,7 @@ $scope.selectColl = function(id) {
   console.log(id);
   $http.get('/dbColl/' + id).success(function(response) {
     $scope.coll = "";
-	$scope.selected = response.collection;
+	$scope.selected = "you have selected the " + response.collection + " collection";
   });
 };
 

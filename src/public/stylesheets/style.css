@@ -3,7 +3,7 @@
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
-	color: #00539F;
+	color: #428bca;
 	text-shadow: 3px 1px 1px black;
 }
 
@@ -23,6 +23,7 @@
 	/*-webkit-animation-delay: 2s;*/
 	/*-moz-animation-iteration-count: infinite;*/
 	border:				0px;
+	color: #428bca;
 }
 
 .frame {
@@ -41,4 +42,8 @@ p, li {
 	text-align:	justify;
 	line-height: 2;
 	letter-spacing: 1px;
+}
+
+table, tr {
+	border: hidden;
 }

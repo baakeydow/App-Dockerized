@@ -1,30 +1,33 @@
-<div class="container" ng-controller="CollCtrl" id="page-content-wrapper">
-	<table style="margin-top:30px;">
-		<thead style="font-size:20px; margin-left:10px;">
-			<tr>
-				&nbsp;&nbsp;
-				<td><input class="form-control"  ng-model="coll.collection" placeholder="Database Collection"></td>
-				<td>&nbsp;&nbsp;<button class="btn btn-primary" ng-click="addColl()">Add Collection</button></td>
-				<td>&nbsp;&nbsp;<button class="btn btn-primary" ng-click="dropAll()">Drop all Collections</button></td>
-			</tr>
-		</thead>
- 		<tbody>
+<div style="margin-top:40px;" class="container" ng-controller="CollCtrl" id="page-content-wrapper">
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h3 class="panel-title">HISTORY</h3>
+		</div>
+		<div class="panel-body">
 			<button g-click="displayColl()">Update List</button>
-			<tr ng-repeat="db in CollList">
-			<td style="text-align: center">{{db}}</td>
-			</tr>
-			<h1 id="Header" style="font-size: 20px; text-align: center; margin-top:30px;">{{selected}}<h1>
-			<td>
-				&nbsp;&nbsp;
-			</td>
-			<tr ng-repeat="coll in dbColl" ng-mouseenter="options=true" ng-mouseleave="options=false">
-				<td>&nbsp;&nbsp;
-					{{coll.collection}}
-					&nbsp;&nbsp;
-					<button ng-show="options" class="btn btn-warning" ng-click="selectColl(coll._id)">Get Collection</button>
-					<button ng-show="options" class="btn btn-danger" ng-click="delColl(coll._id)">Drop Collection</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+				<span ng-repeat="db in CollList" class="control-label1" style="text-align: center">{{db}} </span>
+		</div>
+	</div>
+	<div style="margin-top:30px;" align="center" id="youtube"></div>
+    <table class="noBorder; table" style="margin-top:30px;">
+      <thead style="color:#428bca;font-size:20px; margin-left:10px;">
+		  <tr>
+			  &nbsp;&nbsp;
+			  <td><input class="form-control"  ng-model="coll.collection" placeholder="Database Collection"></td>
+			  <td>&nbsp;&nbsp;<button class="btn btn-primary" ng-click="addColl()">Add Collection</button></td>
+			  <td>&nbsp;&nbsp;<button class="btn btn-primary" ng-click="dropAll()">Drop all Collections</button></td>
+		  </tr>
+      </thead>
+      <tbody ng-mouseenter="options=true" ng-mouseleave="options=false">
+		  <p id="Header" style="font-size: 20px; text-align: left;">{{selected}}</p>
+		  <tr ng-repeat="coll in dbColl" ng-mouseenter="options=true" ng-mouseleave="options=false">
+			  <td>&nbsp;&nbsp;
+				  {{coll.collection}}
+				  &nbsp;&nbsp;</td>
+				  <td>&nbsp;&nbsp;<button ng-show="options" class="btn btn-warning" ng-click="selectColl(coll._id)">Get Collection</button></td>
+				  <td>&nbsp;&nbsp;<button ng-show="options" class="btn btn-danger" ng-click="delColl(coll._id)">Drop this Collection</button></td>
+			  </td>
+		  </tr>
+      </tbody>
+    </table>
 </div>
