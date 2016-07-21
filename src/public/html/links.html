@@ -1,12 +1,12 @@
-<div class="container" ng-controller="TechCtrl" id="page-content-wrapper">
+<div class="container; panel panel-primary" ng-controller="TechCtrl" id="page-content-wrapper">
 	<table class="table">
 		<tr class="page-header">
-			<h1> Links App <button class="btn btn-primary" ng-click="firedata()">FireData</button>
+			<h1 class="panel-heading"> Links App <button class="btn btn-danger" ng-click="firedata()">FireData</button>
 			</h1>
 		</tr>
     </table>
-    <table class="table" style="margin-top:30px;">
-      <thead style="font-size:20px; margin-left:10px;">
+    <table class="noBorder; panel-body ; table" style="margin-top:30px;">
+      <thead style="color:#428bca;font-size:20px; margin-left:10px;">
         <tr>
           <th>Description</th>
           <th>Links</th>
@@ -16,12 +16,10 @@
       </thead>
 	  <div style="margin-top:30px;" align="center" id="youtube"></div>
       <tbody ng-mouseenter="options=true" ng-mouseleave="options=false">
-        <!-- <tr ng-show="options"> -->
           <td><input class="form-control" ng-model="tech.desc" placeholder="Description"></td>
           <td><input class="form-control" ng-model="tech.name"></td>
           <td><button class="btn btn-primary" ng-click="addLinks()">Add Link</button></td>
           <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
-        <!-- </tr> -->
         <tr ng-repeat="tech in techLinks | filter:tech.desc | orderBy:'Description'">
           <td>
 			  <a href="{{tech.name}}">{{tech.desc}}</a>
