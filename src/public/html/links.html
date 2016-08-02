@@ -22,7 +22,7 @@
           <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
         <tr ng-repeat="tech in techLinks | filter:tech.desc | orderBy:'Description'">
           <td>
-			  <a href="{{tech.name}}">{{tech.desc}}</a>
+			  <a href="{{tech.name}}" target="_blank">{{tech.desc}}</a>
 		  </td>
           <td><button ng-show="options" class="btn btn-danger" ng-click="remove(tech._id)">Remove</button></td>
           <td><button ng-show="options" class="btn btn-warning" ng-click="edit(tech._id)">Edit</button></td>
